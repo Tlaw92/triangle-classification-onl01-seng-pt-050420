@@ -13,7 +13,11 @@ class Triangle
     def kind
       if @s1 == @s2 && @s1 == @s3
         return "equilateral"
-      else @s1   
+      elsif is_scalene?
+        return "scalene"  
+      elsif
+      end   
+      
       if has_zero_length_side? || sides_invalid?
          raise TriangleError
       end 
