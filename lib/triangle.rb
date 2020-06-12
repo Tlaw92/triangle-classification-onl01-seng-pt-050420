@@ -11,17 +11,23 @@ class Triangle
   end   
   
     def kind
+      if has_zero_length_side? || sides_invalid?
+         raise TriangleError
+      end 
+      
       if @s1 == @s2 && @s1 == @s3
         return "equilateral"
       elsif is_scalene?
         return "scalene"  
-      elsif
+      else
+        return "isosceles"
       end   
       
-      if has_zero_length_side? || sides_invalid?
-         raise TriangleError
-      end 
     end  
+    
+    def is_scalene?
+      
+    end   
     
     def sides_invalid?
         @s1 + @s2 <= @s3 && @s1 + @s3 <= @s2  && @s3 + @s2 <= @s1
