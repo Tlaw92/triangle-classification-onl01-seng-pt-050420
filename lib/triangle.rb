@@ -11,8 +11,13 @@ class Triangle
   end   
   
     def kind 
+      if 
+    end  
+    
+    def has_zero_length_side?
       
     end   
+      
   
   class TriangleError < StandardError
     def message
