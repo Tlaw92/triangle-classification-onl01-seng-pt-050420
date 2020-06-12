@@ -10,9 +10,11 @@ class Triangle
     end   
   end   
   
+    def kind 
+      
+    end   
   
-  
-  class ZeroLengthError < StandardError
+  class TriangleError < StandardError
     def message
       "All three sides must be greater than 0"
     end 
