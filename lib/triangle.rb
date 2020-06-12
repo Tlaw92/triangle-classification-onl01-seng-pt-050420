@@ -26,7 +26,7 @@ class Triangle
     end   
     
     def sides_invalid?
-        @s1 + @s2 <= @s3 && @s1 + @s3 <= @s2  && @s3 + @s2 <= @s1
+        @s1 + @s2 <= @s3 || @s1 + @s3 <= @s2  || @s3 + @s2 <= @s1
     end   
     
     def has_zero_length_side?
