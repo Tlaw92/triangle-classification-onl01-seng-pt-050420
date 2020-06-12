@@ -34,7 +34,7 @@ class Triangle
     end   
     
     def has_zero_length_side?
-      @s1 == 0 || @s2 == 0 || @s3 == 0
+      @s1 <= 0 || @s2 <= 0 || @s3 <= 0
     end   
       
   
