@@ -10,7 +10,9 @@ class Triangle
     end   
   end   
   
-    def kind 
+    def kind
+      if @s1 == @s2 && @s1 == @s3
+        
       if has_zero_length_side? || sides_invalid?
          raise TriangleError
       end 
@@ -29,6 +31,10 @@ class Triangle
     def message
       "All three sides must be greater than 0"
     end 
+    
+    
+    
+    
   end   
   
   
