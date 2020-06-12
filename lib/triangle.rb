@@ -11,11 +11,19 @@ class Triangle
   end   
   
     def kind 
-      if 
+      if has_zero_length_side? || sides_invalid?
+         raise TriangleError
+      end 
     end  
     
+    def sides_invalid?
+      @s1 + @s2 <= @s3
+        && @s1 + @s3 <= @s2
+        && @s3 + @s2 <= @s1
+    end   
+    
     def has_zero_length_side?
-      
+      @s1 == 0 || @s2 == 0 || @s3 == 0
     end   
       
   
