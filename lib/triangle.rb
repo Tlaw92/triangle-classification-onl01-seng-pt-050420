@@ -17,16 +17,16 @@ class Triangle
       
       if @s1 == @s2 && @s1 == @s3
         return "equilateral"
-      elsif is_scalene?
-        return "scalene"  
+      elsif is_isosceles?
+        return "isosceles"  
       else
-        return "isosceles"
+        return "scalene"
       end   
       
     end  
     
-    def is_scalene?
-      
+    def is_isosceles?
+      @s1 == @s3 || @s1 == @s2 || @s2 == @s3
     end   
     
     def sides_invalid?
