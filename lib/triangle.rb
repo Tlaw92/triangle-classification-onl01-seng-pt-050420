@@ -16,11 +16,11 @@ class Triangle
       end 
       
       if @s1 == @s2 && @s1 == @s3
-        return "equilateral"
+        return :equilateral
       elsif is_isosceles?
-        return "isosceles"  
+        return :isosceles  
       else
-        return "scalene"
+        return :scalene
       end   
       
     end  
